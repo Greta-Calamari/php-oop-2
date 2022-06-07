@@ -42,11 +42,14 @@ $items = [
 ]
 
 
-// try {
-//  $proprietario1->setEmail('pippo.com');
-// } catch (Exception $e) {
-//  echo 'Errore: ' . $e->getMessage();
-// }
+//  try {
+//  $utente1->setEmail('greta@gmail.com');
+//  } catch (Exception $e) {
+//   echo 'Errore: ' . $e->getMessage();
+//  }
+
+$utente1 = new User('greta','calamari','greta@gmail.com','mastercard');
+var_dump($utente1);
 
 ?>
 
