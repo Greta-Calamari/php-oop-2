@@ -7,6 +7,7 @@ Il pagamento avviene con la carta di credito, che non deve essere scaduta. -->
 <?php 
 
 require_once __DIR__.'/Classes/Products.php';
+require_once __DIR__.'/Classes/User.php';
 
 $items = [
     [
@@ -40,6 +41,13 @@ $items = [
 
 ]
 
+
+// try {
+//  $proprietario1->setEmail('pippo.com');
+// } catch (Exception $e) {
+//  echo 'Errore: ' . $e->getMessage();
+// }
+
 ?>
 
 <!DOCTYPE html>
@@ -60,12 +68,13 @@ $items = [
                             $items = new Products($value['name'],$value['brand'],$value['price']);
                             
                     ?>         
-            <div class="card col ms-3" style="width: 18rem;">
+            <div class="card col ms-3 text-center" style="width: 18rem;">
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo $items->name ?> </h5>
                     <p class="card-text"> <?php echo $items->brand ?> </p>
                     <p class="card-text"> <?php echo $items->price ?> </p>
+                    <button type="button" class="btn btn-primary">Comprami</button>
 
                 </div>
                 
