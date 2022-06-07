@@ -3,7 +3,7 @@ class User{
     protected $nome;
     protected $cognome;
     protected $email;
-    protected $carta;
+    
     
     function __construct($_nome,$_cognome,$_email){
         $this->nome = $_nome;
@@ -35,13 +35,7 @@ class User{
     public function getEmail(){
         return $this->email;
     }
-    public function setCarta($_carta){
-        
-       $this->carta = $_carta ;
-    }
-    public function getCarta($_carta){
-        return $this->carta;
-    }
+    
 
     
 }

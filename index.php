@@ -7,7 +7,11 @@ Il pagamento avviene con la carta di credito, che non deve essere scaduta. -->
 <?php 
 
 require_once __DIR__.'/Classes/Products.php';
-require_once __DIR__.'/Classes/User.php';
+require_once __DIR__.'/Classes/cartaCredito.php';
+require_once __DIR__.'/Classes/UserPremium.php';
+
+
+
 
 $items = [
     [
@@ -39,7 +43,7 @@ $items = [
 
     ],
 
-]
+];
 
 
 //  try {
@@ -48,8 +52,12 @@ $items = [
 //   echo 'Errore: ' . $e->getMessage();
 //  }
 
-$utente1 = new User('greta','calamari','greta@gmail.com','mastercard');
+$utente1 = new User('greta','calamari','greta@gmail.com');
 var_dump($utente1);
+
+$utente2 = new UserPremium('greto','calamaro','greto@gmail.com');
+$utente2->setSconto('20%');
+var_dump($utente2);
 
 ?>
 
