@@ -5,6 +5,14 @@ class CartaCredito extends User{
     protected $name;
     protected $surname;
     protected $dateScad;
+    
+    function __construct($_number, $_name, $_surname,$_dateScad)
+    {
+        $this->number = $_number;
+        $this->name = $_name;
+        $this->surname = $_surname;
+        $this->dateScad = $_dateScad;
+    }
 
 
     public function setNumber($_sconto){
@@ -26,7 +34,11 @@ class CartaCredito extends User{
         return $this->surname;
     }
     public function setDate($_dateScad){
-        $this->number = $number;
+        if(strtotime(date('m/y')) > strtotime($_dateScad)){
+            throw new Exception('La carta inserita è scaduta');
+        }else{
+            $this->dateScad = $_dateScad;
+        }
     }
     public function getDate(){
         return $this->dateScad;

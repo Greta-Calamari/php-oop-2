@@ -3,12 +3,14 @@ class User{
     protected $nome;
     protected $cognome;
     protected $email;
+    protected $cartaCredito;
     
     
-    function __construct($_nome,$_cognome,$_email){
+    function __construct($_nome,$_cognome,$_email,$_cartaCredito){
         $this->nome = $_nome;
         $this->cognome = $_cognome;
         $this->email = $_email;
+        $this->cartaCredito = $_cartaCredito;
     }
 
     public function setNome($_nome){
@@ -34,6 +36,12 @@ class User{
     }
     public function getEmail(){
         return $this->email;
+    }
+    public function setcartaCredito($_cartaCredito){
+        $this->cartaCredito= $_cartaCredito;
+    }
+    public function getcartaCredito(){
+        return $this->cartaCredito;
     }
     
 
