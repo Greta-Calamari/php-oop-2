@@ -46,18 +46,25 @@ $items = [
 ];
 
 
-//  try {
-//  $utente1->setEmail('greta@gmail.com');
-//  } catch (Exception $e) {
-//   echo 'Errore: ' . $e->getMessage();
-//  }
-
-$utente1 = new User('greta','calamari','greta@gmail.com');
+// UTENTE
+$utente1 = new User('greta','calamari','greta@gmail.com','');
 var_dump($utente1);
 
-$utente2 = new UserPremium('greto','calamaro','greto@gmail.com');
+
+// utente premium
+$utente2 = new UserPremium('greto','calamaro','greto@gmail.com','');
 $utente2->setSconto('20%');
 var_dump($utente2);
+
+// carta di credito
+$card1 = new cartaCredito('987654321', 'greta', 'calamari','20/2030');
+$card2 = new cartaCredito('123456789','greto', 'calamaro','07/2023');
+var_dump($card1);
+var_dump($card2);
+
+
+$utente1->setcartaCredito($card1);
+$utente2->setcartaCredito($card2);
 
 ?>
 
