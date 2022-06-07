@@ -10,7 +10,7 @@ class User extends UserPremium{
     }
 
     public function setSconto($_sconto){
-        $this->sconto = $this->eta > 50 ? $_sconto : $this->sconto;
+        // qui metto lo sconto
     }
     public function getSconto(){
         return $this->sconto;
